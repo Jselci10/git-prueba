@@ -1,0 +1,31 @@
+.ubicacion {
+    display: flex;
+    font-style: italic;
+    padding: 50px;
+}
+
+.ubicacion {
+        background-color: #8da1fa;
+    border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size:25px;
+        padding: 20px;
+        margin: 15px;
+    
+}
+ 
+.map {
+    display: flex;
+justify-content: center;
+}
+
+
+.form {
+    padding: 150px;
+    margin: 50px;
+    background-color: #929292;
+    border-radius: 10%;
+}

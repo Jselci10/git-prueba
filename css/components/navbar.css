@@ -1,0 +1,37 @@
+.menu-navegador {
+  background-color: #929292;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-navegador ul {
+  list-style-type: none;
+  text-align: right;
+  text-decoration: none;
+}
+
+.menu-navegador ul li {
+  display: inline;
+  padding: 10px;
+  color: #f01414;
+  background-color: #000000;
+  border-radius: 10px;
+  gap: 10px;
+  margin: 5px;
+}
+
+.menu-navegador a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f01414;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.menu-navegador a img {
+  width: 90px;
+  height: 90px;
+}
+
+/*# sourceMappingURL=navbar.css.map */

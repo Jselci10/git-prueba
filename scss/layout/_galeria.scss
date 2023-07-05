@@ -1,0 +1,22 @@
+.grilla {
+    display: grid;
+    display: flex;
+    color: #000000;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center
+
+}
+
+.grilla img {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    gap: 25px;
+
+}
+

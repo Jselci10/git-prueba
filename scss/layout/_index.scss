@@ -1,0 +1,67 @@
+
+h5{
+    color: aliceblue;
+}
+
+.conteiner {
+display: flex;
+flex-direction: row;
+}
+.card{
+    display: flex;
+
+    width: 300px;
+    height: 450px;
+    padding: 20px;
+    margin: 20px;
+    justify-content: center;
+    background-color: #929292;
+
+    & img-top{
+        display: flex;
+        background-color: #929292;
+            width: 100px;
+        height: 100px;
+        margin: 75px;
+        object-fit: cover;
+        justify-content: center;
+        align-self: flex-end;
+}
+
+.card-text{
+    color: black;
+}
+
+.btn-primary{
+    background-color: #f01414;
+    border-color: #f01414;
+    display: flex;
+    justify-content:center;
+}
+
+    .btn-primary:hover {
+        background-color: #921010;
+        border-color: rgb(146, 16, 16);
+    }
+
+
+
+.div label input {
+    margin: 20px;
+
+}
+}
+
+.carr{
+    width: 1000px;
+    height: 700px;
+    margin-left: 120px;
+}
+
+.carousel-caption-d-none-d-md-block {
+    color: #ff0000;
+    
+    & .p-de-carr{
+        color: #ff0000;
+    }
+}
