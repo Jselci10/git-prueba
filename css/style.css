@@ -57,6 +57,7 @@ footer {
 }
 
 .textito {
+  font-style: italic;
   width: 500px;
   font-size: 25px;
   color: #f01414;
@@ -85,6 +86,7 @@ footer {
 
 .menu-navegador ul li {
   display: inline;
+  font-style: italic;
   padding: 10px;
   color: #f01414;
   background-color: #000000;
@@ -125,6 +127,8 @@ footer {
 
 .map {
   display: flex;
+  height: 450px;
+  width: 600px;
   justify-content: center;
 }
 
@@ -153,6 +157,37 @@ footer {
   align-items: center;
   border: 3px solid black;
   gap: 25px;
+}
+
+.nosotro {
+  background-color: darkgrey;
+}
+.nosotro h1, .nosotro h2, .nosotro p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nosotro ul, .nosotro li {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ser {
+  background-color: darkgrey;
+}
+.ser h2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.ser .accordion {
+  margin-bottom: 15px;
+}
+.ser ul, .ser li {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .accordion, .accordion-item {
@@ -195,34 +230,42 @@ h5 {
   justify-content: center;
   align-self: flex-end;
 }
-.card .card-text {
+
+.card-text {
   color: black;
 }
-.card .btn-primary {
+
+.btn-primary {
   background-color: #f01414;
   border-color: #f01414;
   display: flex;
   justify-content: center;
 }
-.card .btn-primary:hover {
+
+.btn-primary:hover {
   background-color: #921010;
   border-color: rgb(146, 16, 16);
 }
-.card .div label input {
+
+.div label input {
   margin: 20px;
 }
 
 .carr {
   width: 1000px;
   height: 700px;
-  margin-left: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.carousel-caption-d-none-d-md-block {
-  color: #ff0000;
-}
-.carousel-caption-d-none-d-md-block .p-de-carr {
-  color: #ff0000;
+.carousel-inner, .carousel-slide {
+  width: 100%;
+  height: 600px;
+  transition: 0.5s;
+  margin-left: 120px;
+  display: flex;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -251,33 +294,108 @@ h5 {
   }
   .carr {
     display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
     width: 800px;
     height: 500px;
     margin: 50px;
+    gap: 10px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 25px;
+    margin-top: 10px;
   }
 }
 @media only screen and (max-width: 865px) {
   .carr {
     display: flex;
-    width: 600px;
-    height: 300px;
+    overflow: hidden;
+    width: 700px;
+    height: 400px;
     margin: 90px;
+  }
+  .carousel-inner,
+  .carousel-slide {
+    margin-left: -120px;
+  }
+  .carousel-inner .footer,
+  .carousel-slide .footer {
+    display: flex;
+    gap: 180px;
+  }
+  .carousel-inner .icons,
+  .carousel-slide .icons {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 25px;
+    margin: 10px, 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menu-navegador {
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .carr {
+    display: flex;
+    overflow: hidden;
+    width: 600px;
+    height: 500px;
+    margin-left: 120px;
   }
   .conteiner {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 50px;
+    justify-content: center;
+  }
+  .footer {
+    display: flex;
+    gap: 130px;
+  }
+  .ser {
+    gap: 0px;
+  }
+  .mul {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
   }
 }
-@media only screen and (max-width: 710px) {
+@media only screen and (max-width: 480px) {
   .menu-navegador {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .menu-navegador a {
+    margin: 20px;
+  }
+  .menu-navegador ul,
+  li {
+    font-size: 15px;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .textito {
+    font-size: 15px;
+    width: 300px;
   }
   .grilla {
     display: grid;
@@ -297,9 +415,53 @@ h5 {
     border: 5px solid black;
     gap: 25px;
   }
-  main {
+  .conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+  .carr {
+    display: flex;
+    height: 300px;
+    margin: 5px;
+    margin-left: -55px;
+  }
+  .carousel-inner,
+  .carousel-slide {
+    width: 300px;
+    height: 100%;
+    margin-left: -120px;
+  }
+  .map {
+    width: 300px;
+    height: 250px;
+  }
+  .form {
     display: flex;
     flex-direction: column;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .col-md-4,
+  .col-md-6,
+  .col-md-3,
+  .col-12 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 150px;
+  }
+  ul, li {
+    display: flex;
+    flex-direction: column;
+  }
+  .ser {
+    margin: 5px;
   }
 }
 
