@@ -1,6 +1,8 @@
 @import url("https:fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap");
-body {
+html, body {
+  width: 100% !important;
+  overflow-x: hidden !important;
   background-color: #dcdcdc;
 }
 
@@ -42,10 +44,15 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
-.icons.bi-whatsapp, .icons .bi-facebook, .icons .bi-instagram {
+.icons .bi-whatsapp,
+.icons .bi-facebook,
+.icons .bi-instagram {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  width: 20px;
+  height: 20px;
+  color: #6b0c0c;
 }
 
 .logo img {
@@ -70,39 +77,50 @@ footer {
   align-items: center;
 }
 
-.menu-navegador {
-  background-color: #929292;
-  padding: 15px;
+.navbar {
+  background-color: #929292 !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  background-color: darkgrey;
 }
 
-.menu-navegador ul {
+.offcanvas-body, .offcanvas-header {
+  background-color: #929292;
+}
+
+.navbar .navbar-nav {
+  display: flex;
   list-style-type: none;
   text-align: right;
   text-decoration: none;
 }
 
-.menu-navegador ul li {
+.navbar-nav {
   display: inline;
   font-style: italic;
-  padding: 10px;
   color: #f01414;
-  background-color: #000000;
   border-radius: 10px;
   gap: 10px;
-  margin: 5px;
 }
 
-.menu-navegador a {
+.nav-link {
+  background-color: #000000;
+  border-radius: 10px;
+}
+.nav-link:hover {
+  background-color: #e65757;
+}
+
+.navbar a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #f01414;
   font-size: 25px;
   text-decoration: none;
 }
 
-.menu-navegador a img {
+.navbar a img {
   width: 90px;
   height: 90px;
 }
@@ -209,6 +227,7 @@ h5 {
 .conteiner {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .card {
@@ -244,7 +263,7 @@ h5 {
 
 .btn-primary:hover {
   background-color: #921010;
-  border-color: rgb(146, 16, 16);
+  border-color: #921010;
 }
 
 .div label input {
@@ -255,6 +274,8 @@ h5 {
   width: 1000px;
   height: 700px;
   display: flex;
+  object-fit: cover;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -262,10 +283,18 @@ h5 {
 .carousel-inner, .carousel-slide {
   width: 100%;
   height: 600px;
-  transition: 0.5s;
   margin-left: 120px;
   display: flex;
   object-fit: cover;
+}
+
+.titulo {
+  font-style: italic;
+  color: black;
+  font-size: 35px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -308,6 +337,20 @@ h5 {
     gap: 25px;
     margin-top: 10px;
   }
+  .navbar a {
+    display: flex;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #f01414;
+    font-size: 25px;
+    justify-content: center;
+  }
+  .nav-link {
+    width: 150px;
+  }
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
 }
 @media only screen and (max-width: 865px) {
   .carr {
@@ -334,6 +377,20 @@ h5 {
     justify-content: flex-end;
     gap: 25px;
     margin: 10px, 20px;
+  }
+  .navbar a {
+    display: flex;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #f01414;
+    font-size: 25px;
+    justify-content: center;
+  }
+  .nav-link {
+    width: 150px;
+  }
+  .navbar-nav {
+    display: flex;
+    align-items: center;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -368,6 +425,20 @@ h5 {
     flex-direction: column;
     padding: 15px;
   }
+  .navbar a {
+    display: flex;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #f01414;
+    font-size: 25px;
+    justify-content: center;
+  }
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav-link {
+    width: 150px;
+  }
 }
 @media only screen and (max-width: 480px) {
   .menu-navegador {
@@ -391,11 +462,17 @@ h5 {
   .footer {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 18px;
+  }
+  .footer .logo img {
+    margin-top: 15px;
+    width: 80px;
+    height: 80px;
   }
   .textito {
-    font-size: 15px;
-    width: 300px;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 250px;
   }
   .grilla {
     display: grid;
@@ -449,12 +526,17 @@ h5 {
   }
   .col-md-4,
   .col-md-6,
-  .col-md-3,
-  .col-12 {
+  .col-md-3 {
     display: flex;
     flex-wrap: wrap;
     width: 300px;
+    height: 100px;
+  }
+  .col-12 {
     height: 150px;
+  }
+  .form-select, .form-control {
+    height: 50px;
   }
   ul, li {
     display: flex;
@@ -462,6 +544,27 @@ h5 {
   }
   .ser {
     margin: 5px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 75px;
+  }
+  .icons .bi-whatsapp, .icons .bi-facebook, .icons .bi-instagram {
+    width: 25px;
+    height: 25px;
+    color: #6b0c0c;
+  }
+  .navbar a {
+    display: flex;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #f01414;
+    font-size: 25px;
+    justify-content: center;
+  }
+  .nav-link {
+    width: 150px;
   }
 }
 

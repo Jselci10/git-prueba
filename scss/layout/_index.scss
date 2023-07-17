@@ -6,6 +6,7 @@ h5{
 .conteiner {
 display: flex;
 flex-direction: row;
+justify-content: space-between;
 }
 .card{
     display: flex;
@@ -42,7 +43,7 @@ flex-direction: row;
 
     .btn-primary:hover {
         background-color: #921010;
-        border-color: rgb(146, 16, 16);
+        border-color: #921010;
     }
 
 
@@ -56,8 +57,9 @@ flex-direction: row;
 .carr{
     width: 1000px;
     height: 700px;
-    
     display: flex;
+    object-fit: cover;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -65,14 +67,18 @@ flex-direction: row;
 .carousel-inner, .carousel-slide{
     width: 100%;
     height: 600px;
-    transition: 0.5s;
     margin-left: 120px;
     display: flex;
     object-fit: cover;
-    
-
-
-
 }
 
+.titulo{
+    font-style: italic;
+    color:black;
+    font-size: 35px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+
+}
 

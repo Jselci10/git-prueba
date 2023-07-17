@@ -43,6 +43,23 @@
     gap: 25px;
     margin-top: 10px;
   }
+
+  .navbar a{
+    display: flex;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #f01414;
+    font-size: 25px;
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: 150px;
+  }
+  
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+  }
 }
 
 
@@ -73,10 +90,24 @@
       gap: 25px;
       margin: 10px, 20px;
     }
-
-
   }
 
+  .navbar a{
+    display: flex;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #f01414;
+    font-size: 25px;
+    justify-content: center;
+  }
+
+  .nav-link {
+    width: 150px;
+  }
+
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+  }
 }
 
 
@@ -118,6 +149,23 @@
     flex-direction: column;
     padding: 15px;
 }
+
+.navbar a{
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f01414;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.navbar-nav{
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  width: 150px;
+}
 }
 
 
@@ -150,13 +198,20 @@
   .footer {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 18px;
+
+    & .logo img {
+        margin-top: 15px;
+        width: 80px;
+        height: 80px;
+
+    }
   }
 
   .textito {
-
-    font-size: 15px;
-    width: 300px;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 250px;
 
   }
 
@@ -225,12 +280,19 @@
 
   .col-md-4,
   .col-md-6,
-  .col-md-3,
-  .col-12 {
+  .col-md-3{
     display: flex;
     flex-wrap: wrap;
     width: 300px;
+    height: 100px;
+  }
+
+  .col-12{
     height: 150px;
+  }
+
+  .form-select, .form-control{
+    height: 50px;
   }
 
   ul, li{
@@ -241,4 +303,30 @@
     margin: 5px;
   }
 
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 75px;
+
+
+  .bi-whatsapp, .bi-facebook, .bi-instagram{
+    width: 25px;
+    height: 25px;
+    color: #6b0c0c;
+  }
+}
+
+.navbar a{
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f01414;
+  font-size: 25px;
+  justify-content: center;
+}
+
+
+.nav-link {
+  width: 150px;
+}
 }
